@@ -3,10 +3,10 @@
  * 比如从本地、数据库目录中读取
  */
 const config = {
-    host     : '47.93.89.187',
-    user     : 'bdm262229207',
-    password : 'woaishuxue123456',
-    database : 'bdm262229207_db'
+    host     : '你的主机地址',
+    user     : '你的用户名',
+    password : '你的密码',
+    database : '你的数据库'
 }
 
 
