@@ -20,9 +20,10 @@ router.get('/getFivePages', function(req, res, next) {
   pool.getConnection((err, connection) => {
     if (err) {throw new Error('连接报错')}
     // 这里获取前台传过来的参数
-
+    console.log(req.query.nums)
+    let n = (req.query && req.query.nums) || 5
     // 连接池里的实体连接对象进行操作
-    connection.query(sqlCode.pages.getFivePages, (error, result) => {
+    connection.query(sqlCode.pages.getFivePages + n, (error, result) => {
       if (err) {throw new Error('查表报错')}
       res.json(responseJSON(result))
       connection.release()

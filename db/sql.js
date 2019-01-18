@@ -4,8 +4,8 @@
 
 const sqlCode = {
     pages: {
-       getFivePages: 'SELECT title FROM pages_new'
-    }
+       getFivePages: 'SELECT title,createTime,id FROM pages_new ORDER BY id DESC LIMIT '
+    }                 
 }
 
 module.exports = sqlCode
